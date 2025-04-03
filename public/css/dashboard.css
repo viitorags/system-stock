@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #eee;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Area Profile */
+
+.area_profile {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background-color: #FFFFFF;
+    padding: 12px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0 , 0, 0.1),
+                0px 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.profile_info {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+
+.profile_img {
+    height: 50px;
+    border-radius: 100%;
+}
+
+/* Menu */
+
+.sidebar_menu {
+    display: none;
+}
+
+.menu_icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Area Dashboard*/
+
+.dashboard_area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    overflow: auto;
+}
+
+.graph {
+    max-height: 400px;
+    max-width: 300px;
+    background-color: #FFFFFF;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0 , 0, 0.2),
+                0px 10px 20px rgba(0, 0, 0, 0.05);
+}
