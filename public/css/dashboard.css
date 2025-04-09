@@ -21,20 +21,23 @@ body {
 .area_profile {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 50px;
     background-color: #FFFFFF;
     padding: 12px;
     width: 100%;
     position: fixed;
     top: 0;
-    box-shadow: 0px 4px 6px rgba(0, 0 , 0, 0.1),
-                0px 10px 20px rgba(0, 0, 0, 0.05);
+    /*box-shadow: 0px 4px 6px rgba(0, 0 , 0, 0.1),
+                0px 10px 20px rgba(0, 0, 0, 0.05);*/
 }
 
 .profile_info {
     display: flex;
-    flex-direction: row-reverse;
-    gap: 10px;
+    flex-direction: column-reverse;
+    font-size: 14px;
+    position: absolute;
+    right: 70px;
 }
 
 .profile_img {
@@ -44,13 +47,49 @@ body {
 
 /* Menu */
 
-.sidebar_menu {
-    display: none;
+.menu_toggle {
+    font-size: 34px;
+    cursor: pointer;
 }
 
-.menu_icon {
+.sidebar_menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background: #FFFFFF;
+    color: black;
+    padding: 60px 20px;
+    box-sizing: border-box;
+
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    pointer-events: none; /* Evita clique quando escondido */
+}
+
+.sidebar_menu.active {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.menu_links {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 30px;
+}
+
+.menu_links ul li {
+    list-style: none;
     font-size: 24px;
-    cursor: pointer;
+}
+
+.menu_links ul li i {
+    margin-right: 10px;
 }
 
 /* Area Dashboard*/
@@ -59,13 +98,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 20px;
     margin-top: 100px;
     overflow: auto;
+    width: 90%;
+    height: 90%;
 }
 
 .graph {
     max-height: 400px;
     max-width: 300px;
+    margin-top: 20px;
     background-color: #FFFFFF;
     margin-bottom: 20px;
     border-radius: 20px;
