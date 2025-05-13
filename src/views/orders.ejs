@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="/public/css/stock.css" />
+	<link rel="stylesheet" href="/public/css/form-styles.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+	<title>Pedidos</title>
+</head>
+
+<body>
+	<main class="container">
+		<div class="sidebar_menu">
+			<div class="logo_img"></div>
+			<div class="menu_links">
+				<ul>
+					<li><i class="bi bi-house"></i>Home</li>
+					<li><i class="bi bi-box2"></i>Estoque</li>
+					<li><i class="bi bi-people"></i>Clientes</li>
+					<li><i class="bi bi-inboxes"></i>Pedidos</li>
+				</ul>
+			</div>
+		</div>
+		<div class="area_profile">
+			<div class="menu_toggle"><i class="bi bi-list"></i></div>
+			<div class="profile_info">
+				<p class="info_name">Vitor Gabriel</p>
+				<p class="info_date"><i class="bi bi-calendar"></i>12/05/2025</p>
+			</div>
+			<img src="/public/images/profile.png" class="profile_img" />
+		</div>
+
+		<div class="stock_area">
+			<div class="form_area">
+				<h2>Cadastro Pedidos</h2>
+				<form id="orderForm">
+					<label for="product_name">Nome do Produto:</label>
+					<input type="text" name="product_name" id="product_name" required />
+					<label for="product_price">Valor:</label>
+					<input type="number" name="product_price" id="product_price" required />
+					<label for="product_amount">Quantidade:</label>
+					<input type="number" name="product_amount" id="product_amount" required />
+					<button type="submit">Registrar Pedido</button>
+				</form>
+			</div>
+			<div class="stock_orders">
+				<table>
+					<thead>
+						<tr>
+							<th>Nome:</th>
+							<th>Valor:</th>
+							<th>Quantidade:</th>
+							<th>Status</th>
+							<th>Ações</th>
+						</tr>
+					</thead>
+					<tbody id="ordersTableBody">
+						<!-- Orders will be loaded here -->
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</main>
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="/public/js/dashboard/dashboard.js"></script>
+	<script src="/public/js/global.js"></script>
+</body>
+
+</html>

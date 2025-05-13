@@ -1,0 +1,24 @@
+<% if (produtos.length> 0) { %>
+	<% produtos.forEach(product=> { %>
+			<tr>
+			<td>
+			<%= product.product_name %>
+			</td>
+			<td>
+			<%= product.product_price %>
+			</td>
+			<td>
+			<%= product.product_quantity %>
+			</td>
+			<td>
+			<button class="editar">Editar</button>
+			<button class="remove_product">Remover</button>
+			</td>
+			</tr>
+			<% }) %>
+		<% } else { %>
+			<tr>
+				<td colspan="4">Nenhum produto cadastrado.</td>
+				</tr>
+				<% } %>
+
