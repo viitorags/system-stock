@@ -47,7 +47,6 @@ const userController = {
                 user_id: user.user_id,
                 name: user.user_name,
                 profileImg: user.user_image || "/public/images/profile.png", // se tiver imagem
-                createdAt: user.created_at || new Date(), // se tiver no banco
             });
         } catch (error) {
             console.error("Erro ao buscar usuário da sessão", error);
