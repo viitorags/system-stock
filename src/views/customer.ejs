@@ -2,60 +2,60 @@
 <html lang="pt-br">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="/public/css/stock.css" />
-	<link rel="stylesheet" href="/public/css/form-styles.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-	<title>Clientes</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/css/stock.css" />
+    <link rel="stylesheet" href="/public/css/form-styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <title>Clientes</title>
 </head>
 
 <body>
-	<main class="container">
-		<div class="sidebar_menu">
-			<div class="logo_img"></div>
-			<div class="menu_links">
-				<ul>
-					<li><i class="bi bi-house"></i>Home</li>
-					<li><i class="bi bi-box2"></i>Estoque</li>
-					<li><i class="bi bi-people"></i>Clientes</li>
-					<li><i class="bi bi-inboxes"></i>Pedidos</li>
-				</ul>
-			</div>
-			<div class="area_profile">
-				<div class="menu_toggle"><i class="bi bi-list"></i></div>
-				<div class="profile_info">
-					<p class="info_name">Vitor Gabriel</p>
-					<p class="info_date"><i class="bi bi-calendar"></i>12/05/2025</p>
-				</div>
-				<img src="/public/images/profile.png" class="profile_img" />
-			</div>
-		</div>
+    <main class="container">
+        <div class="sidebar_menu">
+            <div class="logo_img"></div>
+            <div class="menu_links">
+                <ul>
+                    <li><i class="bi bi-house"></i>Home</li>
+                    <li><i class="bi bi-box2"></i>Estoque</li>
+                    <li><i class="bi bi-people"></i>Clientes</li>
+                    <li><i class="bi bi-inboxes"></i>Pedidos</li>
+                </ul>
+            </div>
+            <div class="area_profile">
+                <div class="menu_toggle"><i class="bi bi-list"></i></div>
+                <div class="profile_info">
+                    <p class="info_name">Vitor Gabriel</p>
+                    <p class="info_date"><i class="bi bi-calendar"></i>12/05/2025</p>
+                </div>
+                <img src="/public/images/profile.png" class="profile_img" />
+            </div>
+        </div>
 
-		<div class="stock_area">
-			<div class="form_area">
-				<h2>Cadastro Clientes</h2>
-				<form action="/" id="productForm">
-					<label for="customer_name">Cliente:</label>
-					<input type="text" name="customer_name" required />
-					<label for="customer_phone">Telefone:</label>
-					<input type="number" name="customer_phone" required />
-					<button type="submit">Adicionar</button>
-				</form>
-			</div>
-			<div class="stock_orders">
-				<table>
-					<tr>
-						<th>Nome:</th>
-						<th>Valor:</th>
-						<th>Quantidade:</th>
-					</tr>
-				</table>
-			</div>
-		</div>
-	</main>
+        <div class="stock_area">
+            <div class="form_area">
+                <h2>Cadastro Clientes</h2>
+                <form action="/" id="productForm">
+                    <label for="customer_name">Cliente:</label>
+                    <input type="text" name="customer_name" required />
+                    <label for="customer_phone">Telefone:</label>
+                    <input type="number" name="customer_phone" required />
+                    <button type="submit">Adicionar</button>
+                </form>
+            </div>
+            <div class="stock_orders">
+                <table>
+                    <tr>
+                        <th>Nome:</th>
+                        <th>Valor:</th>
+                        <th>Quantidade:</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
 
-	<script src="/public/js/global.js"></script>
+    <script src="/public/js/global.js"></script>
 </body>
 
 </html>

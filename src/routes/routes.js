@@ -6,15 +6,15 @@ import ordersRouter from "./ordersRoute.js";
 import customerRouter from "./customerRoute.js";
 
 const routes = (app) => {
-	// Rotas públicas
-	app.use("/", loginRouter);
-	app.use("/register", registerRouter);
+    // Rotas públicas
+    app.use("/", loginRouter);
+    app.use("/register", registerRouter);
 
-	// Rotas protegidas — validação dentro de cada router
-	app.use("/dashboard", dashboardRouter);
-	app.use("/stock", stockRouter);
-	app.use("/orders", ordersRouter);
-	app.use("/customer", customerRouter);
+    // Rotas protegidas — validação dentro de cada router
+    app.use("/dashboard", dashboardRouter);
+    app.use("/stock", stockRouter);
+    app.use("/orders", ordersRouter);
+    app.use("/customer", customerRouter);
 };
 
 export default routes;

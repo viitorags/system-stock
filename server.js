@@ -15,15 +15,17 @@ const __dirname = path.dirname(__filename);
 app.use(express.json());
 
 // Sessão de usuário
-app.use(expressSession({
-	secret: 'segredo',
-	resave: false,
-	saveUninitialized: false,
-	cookie: {
-		secure: false,  // Mantenha falso para HTTP, use true para HTTPS
-		maxAge: 1000 * 60 * 60 * 24  // 1 dia em milissegundos
-	}
-}));
+app.use(
+    expressSession({
+        secret: "segredo",
+        resave: false,
+        saveUninitialized: false,
+        cookie: {
+            secure: false, // Mantenha falso para HTTP, use true para HTTPS
+            maxAge: 1000 * 60 * 60 * 24, // 1 dia em milissegundos
+        },
+    }),
+);
 app.set("trust proxy", 1);
 
 app.set("view engine", "ejs");
@@ -36,13 +38,13 @@ routes(app);
 
 app.get("/api/user", userController.getUserSession);
 app.post("/api/login", userController.login, (req, res) => {
-	req.session.userId = req.user.user_id;
-	res.send('Usuário logado!');
+    req.session.userId = req.user.user_id;
+    res.send("Usuário logado!");
 });
 app.get("/api/produtos", productController.getAllProducts);
 app.post("/api/produtos", productController.createNewProduct);
 app.delete("/api/produtos/:product_id", productController.deleteProduct);
 app.post("/api/registerUser", userController.createNewUser);
 app.listen(PORT, () => {
-	console.log(`Server rodando em http://localhost:${PORT}`);
+    console.log(`Server rodando em http://localhost:${PORT}`);
 });
